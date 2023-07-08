@@ -128,13 +128,9 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.claudio = {
     isNormalUser = true;
-    description = "Claudio Migliorelli";
     extraGroups = [ "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
   };
-
-  # Toggle commandline completion
-  environment.pathsToLink = [ "/share/zsh" ];
 
   # Enable Docker and virtualization-related software
   virtualisation.docker.enable = true;
@@ -155,6 +151,8 @@
   users.users.claudio.packages = with pkgs; [
     chromium
     ghidra
+    git
+    emacs
   ];
 
   # List fonts to be installed
