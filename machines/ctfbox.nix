@@ -165,6 +165,7 @@
     inter
     lato
     inconsolata
+    liberation-mono
     fira
     fira-code
   ];
