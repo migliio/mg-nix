@@ -164,6 +164,7 @@
     pwndbg
     emacs
     kitty
+    tmux
   ];
 
   # List fonts to be installed

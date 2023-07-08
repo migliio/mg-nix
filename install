@@ -10,6 +10,8 @@ install_configs() {
 
     mkdir -p ~/.config/kitty
     cp ./configs/kitty.config ~/.config/kitty/kitty.conf
+
+    cp ./configs/tmux.config ~/.tmux.conf
 }
 
 if [ $# -eq 0 ]; then
