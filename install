@@ -8,7 +8,13 @@ install_configs() {
 }
 
 if [ $# -eq 0 ]; then
-  echo "usage: install <command>"
+  echo "usage: $0 CONFIG"
+  echo "Possible configs:"
+  echo "  ctfbox   Install the CTF NixOS configuration"
+  echo "  help     Show this help text"
+  echo "Note:"
+  echo "  Make sure you have the necessary permissions to run these commands."
+  echo "  It is recommended to run this script with superuser privileges."  
   exit 1
 fi
 
@@ -21,7 +27,7 @@ case "$1" in
     echo "[!] DONE!"
   "help")
     echo "+---- NIXOS utility ---+"
-    echo "usage: $0 COMMAND"
+    echo "usage: $0 CONFIG"
   *)
     echo "Invalid argument. Exiting..."
     exit 1
