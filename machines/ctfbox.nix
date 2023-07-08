@@ -153,9 +153,15 @@
   ];
 
   users.users.claudio.packages = with pkgs; [
+    (python39.withPackages(ps: with ps; [
+      pip
+      ropper
+    ]))
     chromium
     ghidra
     git
+    gdb
+    pwndbg
     emacs
     kitty
   ];
