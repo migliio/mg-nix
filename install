@@ -5,6 +5,7 @@ set -e
 install_configs() {
     mkdir -p ~/.config/i3
     cp ./configs/i3.config ~/.config/i3/config
+    cp ./configs/zsh.config ~/.zshrc
 }
 
 if [ $# -eq 0 ]; then
