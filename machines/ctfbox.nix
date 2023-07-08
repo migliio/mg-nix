@@ -165,7 +165,7 @@
     inter
     lato
     inconsolata
-    liberation-mono
+    liberation_ttf
     fira
     fira-code
   ];
