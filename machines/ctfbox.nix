@@ -210,7 +210,7 @@
 
   # To work in a VM
   services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = mkSure true;
+  services.spice-vdagentd.enable = true;
   
   services.gnome.gnome-keyring.enable = true;
   services.blueman = {
