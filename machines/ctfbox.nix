@@ -33,18 +33,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
-  # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
-
-  # Enable swap on luks
-  boot.initrd.luks.devices."luks-9eccad4c-7459-43f2-bbba-b1e41ccb2db0".device = "/dev/disk/by-uuid/9eccad4c-7459-43f2-bbba-b1e41ccb2db0";
-  boot.initrd.luks.devices."luks-9eccad4c-7459-43f2-bbba-b1e41ccb2db0".keyFile = "/crypto_keyfile.bin";
-
-  networking.hostName = "think"; # Define your hostname.
+  networking.hostName = "ctfbox"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -98,13 +89,6 @@
         tapping = false;
         disableWhileTyping = true;
       };
-    };
-    xautolock = {
-      enable = true;
-      time = 10;
-      extraOptions = [
-        "-detectsleep"
-      ];
     };
     displayManager = {
         sddm.enable = true;
@@ -193,18 +177,14 @@
   programs.nm-applet = {
     enable = true;
   };
-  programs.light = {
+  programs.zsh = {
     enable = true;
-  };
-  programs.xss-lock = {
-    enable = true;
-    lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
   };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon
-  services.openssh.enable = false;
+  services.openssh.enable = true;
 
   services.avahi = {
     enable = true;
@@ -216,22 +196,9 @@
       userServices = true;
     };
   };
-  services.mullvad-vpn = {
-    enable = true;
-  };
   services.gnome.gnome-keyring.enable = true;
   services.blueman = {
     enable = true;
-  };
-  services.geoclue2 = {
-    enable = true;
-  };
-  services.actkbd = {
-    enable = true;
-    bindings = [
-      { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
-      { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
-    ];
   };
 
 
