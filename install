@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -xe
+set -e
 
 install_configs() {
     mkdir -p ~/.config/i3
@@ -14,7 +14,7 @@ if [ $# -eq 0 ]; then
   echo "  help     Show this help text"
   echo "Note:"
   echo "  Make sure you have the necessary permissions to run these commands."
-  echo "  It is recommended to run this script with superuser privileges."  
+  echo "  It is recommended to run this script with superuser privileges."
   exit 1
 fi
 
@@ -25,11 +25,13 @@ case "$1" in
     sudo cp ./machines/ctfbox.nix /etc/nixos/configuration.nix
     sudo nixos-rebuild switch
     echo "[!] DONE!"
+    ;;
   "help")
     echo "+---- NIXOS utility ---+"
     echo "usage: $0 CONFIG"
-  *)
-    echo "Invalid argument. Exiting..."
-    exit 1
     ;;
+  *)
+      echo "Invalid argument. Exiting..."
+      exit 1
+      ;;
 esac
