@@ -27,6 +27,8 @@ _________________
   - `./machines': configuration files for different virtual machines.
   - `./scripts': additional scripts or utilities that assist with
     managing the virtual machines.
+  - `./configs': minimal configuration files to speed up the machine
+    setup.
 
 
 2.1 Files and usage
