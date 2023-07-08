@@ -15,7 +15,7 @@ case "$1" in
     echo "[!] DONE!"
   "help")
     echo "+---- NIXOS utility ---+"
-    echo "usage: install <command>"
+    echo "usage: $0 COMMAND"
   *)
     echo "Invalid argument. Exiting..."
     exit 1
