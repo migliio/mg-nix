@@ -2,6 +2,11 @@
 
 set -xe
 
+install_configs() {
+    mkdir -p ~/.config/i3
+    cp ./configs/i3.config ~/.config/i3/config
+}
+
 if [ $# -eq 0 ]; then
   echo "usage: install <command>"
   exit 1
@@ -10,6 +15,7 @@ fi
 case "$1" in
   "ctf")
     echo "[+] Rebuilding NixOS CTF configuration for you..."
+    install_configs
     sudo cp ./machines/ctfbox.nix /etc/nixos/configuration.nix
     sudo nixos-rebuild switch
     echo "[!] DONE!"
