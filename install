@@ -5,7 +5,11 @@ set -e
 install_configs() {
     mkdir -p ~/.config/i3
     cp ./configs/i3.config ~/.config/i3/config
+    
     cp ./configs/zsh.config ~/.zshrc
+
+    mkdir -p ~/.config/kitty
+    cp ./configs/kitty.config ~/.config/kitty/kitty.conf
 }
 
 if [ $# -eq 0 ]; then
