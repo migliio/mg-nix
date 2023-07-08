@@ -19,7 +19,7 @@ if [ $# -eq 0 ]; then
 fi
 
 case "$1" in
-  "ctf")
+  "ctfbox")
     echo "[+] Rebuilding NixOS CTF configuration for you..."
     install_configs
     sudo cp ./machines/ctfbox.nix /etc/nixos/configuration.nix
