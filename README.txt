@@ -2,7 +2,8 @@ Table of Contents
 _________________
 
 1. Introduction
-2. Files and usage
+2. Repository structure
+.. 1. Files and usage
 
 
 1 Introduction
@@ -11,7 +12,7 @@ _________________
   Welcome to my personal Nix repository! Here, I store various NixOS
   configuration files that cater to different needs. This repository
   serves as a convenient way for me to manage and organize my virtual
-  machines using quickemu [1] and NixOS [2]
+  machines using quickemu [1] and NixOS [2].
 
   Nix is a powerful package manager and a functional programming
   language that enables reproducible builds and declarative system
@@ -20,12 +21,20 @@ _________________
   customization of system configurations.
 
 
-2 Files and usage
-=================
+2 Repository structure
+======================
 
   - `./machines': configuration files for different virtual machines.
   - `./scripts': additional scripts or utilities that assist with
     managing the virtual machines.
+
+
+2.1 Files and usage
+~~~~~~~~~~~~~~~~~~~
+
+  - `./machines/ctfbox.nix': this is the configuration I use to solve
+    CTFs, mainly tailored for binary analysis, reverse engineering, user
+    and kernel exploitation.
 
 
 
