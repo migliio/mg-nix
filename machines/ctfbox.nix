@@ -207,6 +207,11 @@
       userServices = true;
     };
   };
+
+  # To work in a VM
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = mkSure true;
+  
   services.gnome.gnome-keyring.enable = true;
   services.blueman = {
     enable = true;
