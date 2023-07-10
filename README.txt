@@ -12,7 +12,7 @@ _________________
   Welcome to my personal Nix repository! Here, I store various NixOS
   configuration files that cater to different needs. This repository
   serves as a convenient way for me to manage and organize my virtual
-  machines using quickemu [1] and NixOS [2].
+  machines using QEMU [1] and NixOS [2].
 
   Nix is a powerful package manager and a functional programming
   language that enables reproducible builds and declarative system
@@ -43,6 +43,6 @@ _________________
 Footnotes
 _________
 
-[1] <https://github.com/quickemu-project/quickemu>
+[1] <https://www.qemu.org/>
 
 [2] <https://nixos.org/>
