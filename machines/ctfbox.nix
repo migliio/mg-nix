@@ -156,6 +156,7 @@
     gdb
     pwndbg
     mg
+    spice-vdagent
     kitty
     tmux
   ];
