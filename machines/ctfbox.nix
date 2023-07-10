@@ -160,6 +160,7 @@
     spice-vdagent
     kitty
     tmux
+    arandr
   ];
 
   # List fonts to be installed
@@ -193,8 +194,7 @@
   services.openssh.enable = true;
 
   # To work in a VM
-  services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true;
+  services.spice-vdagentd.enable = true;  
   
   services.gnome.gnome-keyring.enable = true;
 
