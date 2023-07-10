@@ -35,7 +35,11 @@ case "$1" in
       sudo cp ./machines/ctfbox.nix /etc/nixos/configuration.nix
       sudo nixos-rebuild switch
       echo "[!] DONE!"
-    ;;
+      ;;
+  "configs")
+      echo "[i] Installing dot files only..."
+      install_configs
+      echo "[!] DONE!"      
   "help")
     echo "+---- NIXOS utility ---+"
     echo "usage: $0 CONFIG"
