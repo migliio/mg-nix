@@ -39,7 +39,8 @@ case "$1" in
   "configs")
       echo "[i] Installing dot files only..."
       install_configs
-      echo "[!] DONE!"      
+      echo "[!] DONE!"
+      ;;
   "help")
     echo "+---- NIXOS utility ---+"
     echo "usage: $0 CONFIG"
