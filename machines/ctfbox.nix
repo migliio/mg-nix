@@ -155,7 +155,7 @@
     git
     gdb
     pwndbg
-    emacs
+    mg
     kitty
     tmux
   ];
