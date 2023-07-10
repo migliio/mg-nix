@@ -31,6 +31,7 @@ case "$1" in
       echo "[i] Installing dot files..."
       install_configs
       echo "[i] All done, now rebuilding NixOS..."
+      sudo mv /etc/nixos/configuration.nix /etc/nixos/configuration.nix.bak
       sudo cp ./machines/ctfbox.nix /etc/nixos/configuration.nix
       sudo nixos-rebuild switch
       echo "[!] DONE!"
